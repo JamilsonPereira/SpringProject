@@ -3,6 +3,7 @@ package br.com.nelioalves.domain;
 import java.io.Serializable;
 import java.util.Objects;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -13,9 +14,15 @@ public class Categoria implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Id
-	@GeneratedValue(strategy= GenerationType.IDENTITY)
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	@Column(name = "id")
 	private Integer id;
+	@Column(name = "nome")
 	private String nome;
+	
+	public Categoria() {
+		
+	}
 
 	public Categoria(Integer id, String nome) {
 		super();

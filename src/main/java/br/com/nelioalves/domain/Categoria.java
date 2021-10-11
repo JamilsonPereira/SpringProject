@@ -15,9 +15,8 @@ public class Categoria implements Serializable {
 
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	@Column(name = "id")
 	private Integer id;
-	@Column(name = "nome")
+	
 	private String nome;
 	
 	public Categoria() {

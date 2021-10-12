@@ -15,6 +15,8 @@ import javax.persistence.ManyToMany;
 
 import org.hibernate.annotations.ManyToAny;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+
 @Entity
 public class Produto implements Serializable {
 	private static final long serialVersionUID = 1L;
@@ -25,6 +27,7 @@ public class Produto implements Serializable {
 	private String nome; 
 	private Double valor;
 	
+	@JsonBackReference
 	@ManyToMany
 	//Para que haja a interação entre tabelas, é necessario criar uma classe intermediaria
 	//é o que esta declarado dentro da jointable que faz isso
